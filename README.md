@@ -10,3 +10,10 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+## TASK TO COMPLETE 
+
+- Use a class based component to create a component to show the user profile (firstname, lastname, email, cell number (use the utilit func))
+
+- using props load task data dynamically to the task list page 
