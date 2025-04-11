@@ -7,15 +7,18 @@ import { Navbar } from './components/Navbar'
 import { TaskInput } from './components/TaskInput'
 import { TaskList } from './components/TaskList'
 import { Footer } from './components/Footer'
+import { tasks } from './constants/tasks'
 
 
 function App() {
+
+  window.localStorage.setItem('tasks', JSON.stringify(tasks))
 
   return (
     <>
       <Navbar />
       <TaskInput />
-      <TaskList />
+      <TaskList tasks={JSON.parse(window.localStorage.getItem('tasks'))} headingText={'My Tasks For Today'}/>
       <Footer />
     </>
   )

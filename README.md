@@ -17,3 +17,7 @@ If you are developing a production application, we recommend using TypeScript an
 - Use a class based component to create a component to show the user profile (firstname, lastname, email, cell number (use the utilit func))
 
 - using props load task data dynamically to the task list page 
+ 1. How data is supposed to be passed in out application
+        props- (properties that are passed to component so as to make the more dynamic)
+ 2. Which concepts to use in order to pass data as required 
+ 3. How do we simply bind the data passed to the application
