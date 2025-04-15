@@ -12,3 +12,14 @@ export const formatBirthDate = (date) => {
     const [year, month, day] = date.split('-');
     return `${day}/${month}/${year}`;
 }
+
+export const fetchTasks = () => {
+    if (window.localStorage.getItem('tasks')) {
+        const tasks = JSON.parse(window.localStorage.getItem('tasks'));
+        console.log("Tasks being fetched", tasks)
+        return tasks ? tasks : [];
+    } else {
+        console.log("No tasks found in local storage");
+        window.localStorage.setItem('tasks', JSON.stringify([]));
+    }
+}
