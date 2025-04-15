@@ -21,3 +21,22 @@ If you are developing a production application, we recommend using TypeScript an
         props- (properties that are passed to component so as to make the more dynamic)
  2. Which concepts to use in order to pass data as required 
  3. How do we simply bind the data passed to the application
+
+
+## Agenda 
+
+- Form Management - 
+- Submission of data 
+
+- Add in an input that will be used to track the time to complete the tasks upon creating the task. 
+(The time should more or less act like an ETA/time due for the task to be completed)
+
+- In the task List Add a section to display the Time to complete for every given task.
+
+## The Lifecycle hooks 
+
+- UseEffect & UseMemo & UseState 
+- Data Fetching - CRUD OPERATIONS i.e CREATE, READ, UPDATE, DELETE
+- State Management 
+
+
