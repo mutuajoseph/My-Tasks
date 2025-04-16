@@ -14,3 +14,69 @@ export const fetchTasks = async () => {
     return error;
   }
 };
+
+export const addTask = async (task) => {
+    try {
+        const response = await fetch(`${BASE_URL}/tasks`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(task),
+        });
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const newTask = await response.json();
+        return newTask;
+        
+    } catch (error) {
+        
+    }   
+}
+
+export const editTask = async (task) => {
+    try {
+        const response = await fetch(`${BASE_URL}/tasks/${task.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(task),
+        });
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const updatedTask = await response.json();
+        return updatedTask;
+        
+    } catch (error) {
+        
+    }
+}
+
+
+export const deleteTask = async () => {
+    try {
+        const response = await fetch(`${BASE_URL}/tasks/${task.id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const deletedTask = await response.json();
+        return deletedTask;
+        
+    } catch (error) {
+        
+    }
+}

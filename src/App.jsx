@@ -7,7 +7,7 @@ import { Navbar } from "./components/Navbar";
 import { TaskInput } from "./components/TaskInput";
 import { TaskList } from "./components/TaskList";
 import { Footer } from "./components/Footer";
-import { fetchTasks } from "./api";
+import { fetchTasks, addTask } from "./api";
 
 function App() {
   const [myTasks, setMyTasks] = useState([]);
@@ -25,23 +25,21 @@ function App() {
 
   const handleTaskSubmission = () => {
     let taskPayload = {
-      id: JSON.parse(window.localStorage.getItem("tasks").length + 1),
+      id: myTasks.length + 1,
       time: taskTime,
       title: newTask,
       status: "pending",
     };
 
-    let tasks = JSON.parse(window.localStorage.getItem("tasks"));
-    tasks.push(taskPayload);
-    window.localStorage.setItem("tasks", JSON.stringify(tasks));
-    setNewTask("");
-    console.log("Task added successfully");
-    console.log("we need to fetch the tasks again");
+    addTask(taskPayload).then((res) => {
+      console.log("Task being added", res);
+      if (res) {
+        setMyTasks((prevTasks) => [...prevTasks, res]);
+        setNewTask("");
+        setTaskTime("");
+      }
+    });
 
-    let tasks2 = fetchTasks();
-    setMyTasks(tasks2);
-    console.log(tasks2);
-    console.log("Tasks being fetched", tasks2);
   };
 
   return (
