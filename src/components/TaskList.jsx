@@ -2,6 +2,8 @@ import React from "react";
 
 export const TaskList = ({tasks, headingText}) => {
 
+  console.log("BLABLABLABLA", tasks)
+
   return (
     <div className="task--list">
       <h2>{headingText}</h2>
