@@ -40,3 +40,14 @@ If you are developing a production application, we recommend using TypeScript an
 - State Management 
 
 
+## DATA FETCHING 
+
+- lOAD TASKS FOR THAT PARTICULAR DAY ON THE INTERFACE 
+       1. We need tp have a source where data is originating from - (json-server)
+       2. how do we load the data into the interface 
+              - create a func that makes a request to the data source - READ(GET) to the api
+              - Use the use Effect Hook to excute the func so that we can have the data in the component on load/render 
+              - Pass this data to a component state - useState Hook 
+              - Dynamically bind the state data to the JSX 
+              - Take a looj at out Ui
+
