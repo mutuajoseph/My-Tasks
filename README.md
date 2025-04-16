@@ -21,3 +21,33 @@ If you are developing a production application, we recommend using TypeScript an
         props- (properties that are passed to component so as to make the more dynamic)
  2. Which concepts to use in order to pass data as required 
  3. How do we simply bind the data passed to the application
+
+
+## Agenda 
+
+- Form Management - 
+- Submission of data 
+
+- Add in an input that will be used to track the time to complete the tasks upon creating the task. 
+(The time should more or less act like an ETA/time due for the task to be completed)
+
+- In the task List Add a section to display the Time to complete for every given task.
+
+## The Lifecycle hooks 
+
+- UseEffect & UseMemo & UseState 
+- Data Fetching - CRUD OPERATIONS i.e CREATE, READ, UPDATE, DELETE
+- State Management 
+
+
+## DATA FETCHING 
+
+- lOAD TASKS FOR THAT PARTICULAR DAY ON THE INTERFACE 
+       1. We need tp have a source where data is originating from - (json-server)
+       2. how do we load the data into the interface 
+              - create a func that makes a request to the data source - READ(GET) to the api
+              - Use the use Effect Hook to excute the func so that we can have the data in the component on load/render 
+              - Pass this data to a component state - useState Hook 
+              - Dynamically bind the state data to the JSX 
+              - Take a looj at out Ui
+
