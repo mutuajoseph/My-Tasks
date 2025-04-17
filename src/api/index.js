@@ -33,7 +33,8 @@ export const addTask = async (task) => {
         return newTask;
         
     } catch (error) {
-        
+        console.error("Error adding task:", error);
+        return error;
     }   
 }
 
@@ -55,12 +56,13 @@ export const editTask = async (task) => {
         return updatedTask;
         
     } catch (error) {
-        
+        console.error("Error editing task:", error);
+        return error;
     }
 }
 
 
-export const deleteTask = async () => {
+export const deleteTask = async (task) => {
     try {
         const response = await fetch(`${BASE_URL}/tasks/${task.id}`, {
             method: "DELETE",
@@ -77,6 +79,7 @@ export const deleteTask = async () => {
         return deletedTask;
         
     } catch (error) {
-        
+        console.error("Error deleting task:", error);
+        return error;
     }
 }
