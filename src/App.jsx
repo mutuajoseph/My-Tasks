@@ -31,6 +31,9 @@ function App() {
   const openEditModal = (task) => {
     setCurrentTask(task)
     setIsEditModalOpen(true);
+    setEditTitle(task.title);
+    setEditTime(task.time);
+    setEditStatus(task.status);
   }
 
   const openDeleteModal = (task) => {
@@ -56,29 +59,35 @@ function App() {
     });
   };
 
-  // const handleTaskEdit = (task) => {
+  const handleTaskEdit = (task) => {
     
-  //   if (task.id) {
-  //     editTask(task).then((res) => {
-  //       console.log("Task Edit res", res)
-  //     })
-  //   }
-  // };
+    if (task.id) {
+      editTask(task).then((res) => {
+        console.log("Task Edit res", res)
+      })
+    }
+  };
 
-  // const handleTaskDelete = (task) => {
-  //   // Implement delete task functionality
-  //   if (task.id) {
-  //     deleteTask(task.id).then((res) => {
-  //       console.log("Task being deleted", res)
-  //     }).catch((err) => {
-  //       console.log("Error deleting task", err)
-  //     })
-  //   }
-  // };
+  const handleTaskDelete = (task) => {
+    // Implement delete task functionality
+    if (task.id) {
+      deleteTask(task.id).then((res) => {
+        console.log("Task being deleted", res)
+      }).catch((err) => {
+        console.log("Error deleting task", err)
+      })
+    }
+  };
 
-  const confirmDeleteTask = () => {}
+  const confirmDeleteTask = () => {
+    handleTaskDelete(currentTask);
+    setIsDeleteModalOpen(false);
+    setCurrentTask(null);
+  }
 
-  const handleSaveEdit = () => {}
+  const handleSaveEdit = () => {
+    
+  }
 
   return (
     <>
