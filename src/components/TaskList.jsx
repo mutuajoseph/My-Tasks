@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TaskList = ({tasks, headingText}) => {
+export const TaskList = ({tasks, headingText, handleTaskEdit, handleTaskDelete}) => {
 
   console.log("BLABLABLABLA", tasks)
 
@@ -14,8 +14,8 @@ export const TaskList = ({tasks, headingText}) => {
           <p>{task.title}</p>
           <p>{task.time}</p>
           <div style={{ display: "flex",  justifyContent:'center', alignItems: "center", gap: "10px" }}>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={() => handleTaskEdit(task)}>Edit</button>
+            <button onClick={() => handleTaskDelete(task)}>Delete</button>
           </div>
         </li>
         ))
