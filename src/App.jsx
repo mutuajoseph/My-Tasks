@@ -39,8 +39,12 @@ function App() {
   };
 
   const handleTaskEdit = (task) => {
-    console.log("EDIT THIS TASK", task);
-    // Implement edit task functionality
+    
+    if (task.id) {
+      editTask(task).then((res) => {
+        console.log("Task Edit res", res)
+      })
+    }
   };
 
   const handleTaskDelete = (task) => {
