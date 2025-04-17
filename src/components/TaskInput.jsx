@@ -1,5 +1,4 @@
 import React from "react";
-import { fetchTasks } from "../utils";
 
 export const TaskInput = ({submitTask, setNewTask, setTaskTime}) => {
 
