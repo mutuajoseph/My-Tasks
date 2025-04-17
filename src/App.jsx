@@ -71,7 +71,7 @@ function App() {
   const handleTaskDelete = (task) => {
     // Implement delete task functionality
     if (task.id) {
-      deleteTask(task.id).then((res) => {
+      deleteTask(task).then((res) => {
         console.log("Task being deleted", res)
       }).catch((err) => {
         console.log("Error deleting task", err)
@@ -80,13 +80,31 @@ function App() {
   };
 
   const confirmDeleteTask = () => {
-    handleTaskDelete(currentTask);
+    handleTaskDelete(currentTask)
     setIsDeleteModalOpen(false);
+
+    setMyTasks((prevTasks) => prevTasks.filter((task) => task.id !== currentTask.id));
     setCurrentTask(null);
+
   }
 
   const handleSaveEdit = () => {
-    
+    const taskUpdate = {
+      ...currentTask,
+      title: editTitle,
+      time: editTime,
+      status: editStatus,
+    }
+
+    handleTaskEdit(taskUpdate)
+    setIsEditModalOpen(false);
+    setMyTasks((prevTasks) =>
+      prevTasks.map((task) => (task.id === currentTask.id ? taskUpdate : task))
+    );
+    setEditTitle("");
+    setEditTime("");
+    setEditStatus("pending");
+    setCurrentTask(null);
   }
 
   return (

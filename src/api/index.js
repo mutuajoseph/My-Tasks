@@ -63,6 +63,7 @@ export const editTask = async (task) => {
 
 
 export const deleteTask = async (task) => {
+    console.log("Task being deleted", task)
     try {
         const response = await fetch(`${BASE_URL}/tasks/${task.id}`, {
             method: "DELETE",
