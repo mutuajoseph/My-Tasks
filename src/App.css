@@ -68,5 +68,15 @@
   border-bottom: 1px solid #646cff;
   width: 80%;
   background: transparent;
+  margin: 4px;
+}
+
+.time-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #646cff;
+  width: 20%;
+  background: transparent;
   margin: 0 4px;
+  padding: 1rem;
 }
