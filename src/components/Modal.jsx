@@ -1,5 +1,5 @@
 
-import '../styles/Modal.css';
+import '../App.css'
 
 export const Modal = ({ isOpen, onClose, children, title }) => {
 
