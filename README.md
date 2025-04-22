@@ -51,3 +51,20 @@ If you are developing a production application, we recommend using TypeScript an
               - Dynamically bind the state data to the JSX 
               - Take a looj at out Ui
 
+
+## AUTHENTICATION USING STATE MANAGEMENT 
+
+- State Management
+   1. Zustand: https://zustand.docs.pmnd.rs/getting-started/introduction
+   2. UseContext: https://www.freecodecamp.org/news/react-context-for-beginners/ 
+- Routing 
+   - https://www.freecodecamp.org/news/how-to-use-react-router-version-6/ 
+
+
+- Using State Management (useContext or Zustand) add authentication on top of the application in that:
+
+    1. Upon launchng the app the user will be presented with a login or register page.
+    2. Upon login or register the user should be redirected to the tasks page.
+    3. Upon clicking the user link on the top right redirect the user to a page that shows their profile 
+    4. As user I should be able to log out and log back in
+    5. Create a branch and make checnges to the branch
