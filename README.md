@@ -68,3 +68,4 @@ If you are developing a production application, we recommend using TypeScript an
     3. Upon clicking the user link on the top right redirect the user to a page that shows their profile 
     4. As user I should be able to log out and log back in
     5. Create a branch and make checnges to the branch
+    6 . Testing Collaboration
